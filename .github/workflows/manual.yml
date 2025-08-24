@@ -27,7 +27,7 @@ jobs:
       - name: Lint with flake8
         run: |
           # fail on any flake8 error (no exit-zero)
-          flake8 .
+          flake8 --config=.flake8 .
 
       - name: Test with pytest
         run: |
