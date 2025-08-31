@@ -25,11 +25,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Lint with flake8
-        run: >
-          flake8 .
-          --max-line-length=100
-          --extend-ignore=E203,W503,E501,E261,E302,E303,W291,W391
-          --per-file-ignores="__init__.py:W391,F401,;local_api.py:F401;main.py:F401,F841;train_model.py:F401;test_ml.py:F401"
+        run: flake8 .
 
       - name: Test with pytest
         run: |
