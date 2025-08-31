@@ -1,0 +1,92 @@
+In this project, you will develop a classification model on publicly available Census Bureau data. You will also write code to monitor the model performance on various data slices. Then, you will deploy your model using the FastAPI package.
+
+Here is an overview of the project steps:
+
+Set up GitHub Action
+Understand the data
+Build a machine learning model
+Construct a machine learning pipeline
+Unit test the model
+Create a RESTful API
+Push the changes to the GitHub repo
+Along the way, you can review the project rubric(opens in a new tab) to ensure you have completed all steps. Following the instructions should match closely to this, but it's worth confirming everything is completed, as reviewers will use this to grade your submission.
+
+Fork the Starter kit
+Go to the Project Repository: Deploying-a-Scalable-ML-Pipeline-with-FastAPI(opens in a new tab) and click on Fork in the upper right corner. This will create a fork in your GitHub account, i.e., a copy of the repository under your control. Now clone the repository locally so you can start working on it:
+
+> git clone https://github.com/[your github username]/Deploying-a-Scalable-ML-Pipeline-with-FastAPI.git
+and go into the repository:
+
+> cd Deploying-a-Scalable-ML-Pipeline-with-FastAPI
+Commit and push to the repository often while you make progress toward the solution. Remember to add meaningful commit messages.
+
+Starter Kit
+The Start Kit contains all the files and folders you need for the project:
+
+data/ : contains a census.csv file
+ml/ : contains some starter code for the project
+data.py: a script for data pre-processing
+model.py: contains functions that train, test, and save the model
+model/ : an empty folder for you to store the trained model
+screenshot/: an empty folder for you to store screenshots to prove your work
+model_card_template.md: a template for documenting the model
+environment.yml: conda environment for setting up the project
+train_model.py: a script for an ML pipeline to take in the data, train the model, and save it.
+main.py: contains starter code for creating a RESTful API using FastAPI
+local_api.py: contains starter code that uses the requests module to do one POST on your live API.
+test_ml.py: contains starter code for you to write tests on the data or the model
+
+You are provided a workspace (on the next page) to complete the project. If you choose to work in the workspace, please read the instructions under the Workspace section carefully. If you choose to work in your local environment, please follow the instructions under the Local Environment section to install the necessary software and dependencies.
+
+Option 1 - Workspace
+You are provided a VS code workspace to complete the project. The workspace has the necessary software and Python libraries for completing the project. However, if you choose to go above and beyond the methods taught in the course, the workspace may not fulfill all that requirements. In this case, you should work on the project on your local machine.
+
+Important notes: your workspace will go idle when you don't actively work in it (e.g., you navigated to another tab). And after a half-hour of idle time, the workspace is destroyed, and your work will be lost. So you must frequently push your changes to the GitHub repo or download your work to your computer.
+
+Option 2 - Local Environment
+You can use either pip or conda to set up the project environment. You only need to choose ONE environment.
+
+Option 2.a: Pip Environment
+Download and install pip and Python (version 3.8 or above) if you don't have it already.
+
+Make sure you are in the Deploying-a-Scalable-ML-Pipeline-with-FastAPI directory. Make sure to have Pip and Python installed and ready, then create a new environment using the following command.
+
+> python3 -m venv fastapi
+> source fastapi/bin/activate
+> pip install -r requirements.txt
+Make sure you are using the fastapi environment. You can check it by this command:
+
+> which python
+You should see a path like:
+
+.../fastapi/bin/python
+If you have trouble using Python in the fastapi environment, try:
+
+> export PATH=[your path of the enviornment]/bin:$PATH
+For example:
+
+> export PATH=/user/.../fastapi/bin:$PATH
+fastapi environment should exist in the Deploying-a-Scalable-ML-Pipeline-with-FastAPI directory.
+
+Option 2.b: Conda Environment
+Download and install Conda if you don't have it already.
+
+Make sure you are in the Deploying-a-Scalable-ML-Pipeline-with-FastAPI directory. Make sure to have conda installed and ready, then create a new environment using the environment.yml file provided in the root of the repository and activate it. Note this process can take a while.
+
+> conda env create -f environment.yml
+> conda activate fastapi
+Make sure you are using Python 3.8 installed in the fastapi environment. You can check it by this command:
+
+> which python
+You should see a message similar to this:
+
+/opt/anaconda3/envs/fastapi/bin/python
+If you have trouble using Python in the fastapi environment, try:
+
+> export PATH=[your path of the enviornment]/bin:$PATH
+For example:
+
+> export PATH=/opt/anaconda3/envs/fastapi/bin:$PATH
+To get the path of the fastapi environment, try the following command, and all the environments' paths should be listed.
+
+> conda info -e

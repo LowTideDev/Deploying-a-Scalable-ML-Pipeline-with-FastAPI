@@ -1,0 +1,43 @@
+Rubric
+Use this project rubric to understand and assess the project criteria.
+
+Git
+Criteria	Submission Requirements
+Set up git with GitHub Actions.
+
+GitHub action should run pytest and flake8 on push to main/master.
+PyTest must pass (by time the project is done there should be at least three tests) and flake8 must pass without errors.
+Include a screenshot of the CI passing called continuous_integration.png.
+Model Building
+Criteria	Submission Requirements
+Create a machine learning model.
+
+The model should train on the provided data. The data should either be split to have a train-test split or use cross-validation on the entire dataset.
+Implement all stubbed functions in the starter code ml/model.py or create equivalents. At a minimum, there should be functions to:
+train, save and load the model and any categorical encoders
+model inference
+determine the classification metrics.
+Complete the script in train_model.py that takes in the data, processes it, trains the model, and saves it and the encoder. This script must use the functions you have written.
+Write unit tests.
+
+Write at least 3 unit tests on ML or the data.
+Include a screenshot showing all tests passed. Name it unit_test.png.
+Write a function that computes model metrics on slices of the data.
+
+Complete a function performance_on_categorical_slice in ml/model.py that computes performance on model slices.
+Complet the train_model.py script that runs the performance_on_categorical_slice function that iterates through the distinct values in one of the features and prints out the model metrics for each value.
+Output the printout to a file named slice_output.txt.
+Write a model card.
+
+The model card should address every section of the template.
+The model card should be written in complete sentences and include metrics on model performance. Please include both the metrics used and your model's performance on those metrics.
+API Creation
+Criteria	Submission Requirements
+Create a REST API.
+
+In main.py The API must implement GET and POST. GET must be on the root domain and give a greeting, and POST on a different path that does model inference.
+API interaction
+
+The local_api.py has both GET and POST requests
+The API is tested locally by running the local_api.py
+A screenshot local_api.png showing the successful status code and the corresponding messages and results in the terminal.
