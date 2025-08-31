@@ -178,5 +178,3 @@ fastapi/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 
-slice_output.txt
-model/
