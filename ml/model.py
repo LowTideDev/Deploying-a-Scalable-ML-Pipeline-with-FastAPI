@@ -49,12 +49,12 @@ def compute_model_metrics(y, preds):
 
 
 def inference(model, X):
-    """ Run model inferences and return the predictions.
+    """Run inference using a scikit-learn estimator and return predictions.
 
     Inputs
     ------
-    model : ???
-        Trained machine learning model.
+    model : sklearn.base.BaseEstimator
+        Trained scikit-learn estimator implementing ``predict``.
     X : np.array
         Data used for prediction.
     Returns
@@ -86,7 +86,7 @@ def load_model(path):
 def performance_on_categorical_slice(
     data, column_name, slice_value, categorical_features, label, encoder, lb, model
 ):
-    """ Computes the model metrics on a slice of the data specified by a column name and
+    """Computes metrics for a scikit-learn estimator on a data slice specified by a column name.
 
     Processes the data using one hot encoding for the categorical features and a
     label binarizer for the labels. This can be used in either training or
@@ -109,8 +109,8 @@ def performance_on_categorical_slice(
         Trained sklearn OneHotEncoder, only used if training=False.
     lb : sklearn.preprocessing._label.LabelBinarizer
         Trained sklearn LabelBinarizer, only used if training=False.
-    model : ???
-        Model used for the task.
+    model : sklearn.base.BaseEstimator
+        Trained scikit-learn estimator used for inference.
 
     Returns
     -------
